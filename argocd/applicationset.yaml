@@ -6,11 +6,11 @@ metadata:
 spec:
   goTemplate: true
   generators:
-  - git:
-      repoURL: https://github.com/alsbevern/argocd-demo-sb.git
-      revision: HEAD
-      directories:
-      - path: applications/*
+    - git:
+        repoURL: https://github.com/alsbevern/argocd-demo-sb.git
+        revision: HEAD
+        directories:
+          - path: applications/*
   template:
     metadata:
       finalizers:
@@ -19,9 +19,9 @@ spec:
     spec:
       project: "default"
       sources:
-      - repoURL: "{{.repoURL}}"
-        targetRevision: "{{.revision}}"
-        path: '{{.path.path}}'
+        - repoURL: "{{.repoURL}}"
+          targetRevision: "HEAD"
+          path: '{{.path.path}}'
       destination:
         namespace: '{{.path.basenameNormalized}}'
         name: "in-cluster"
