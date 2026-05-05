@@ -19,7 +19,7 @@ spec:
     spec:
       project: "default"
       sources:
-        - repoURL: "{{.repoURL}}"
+        - repoURL: "https://github.com/alsbevern/argocd-demo-sb.git"
           targetRevision: "HEAD"
           path: '{{.path.path}}'
       destination:
