@@ -7,7 +7,7 @@ spec:
   goTemplate: true
   generators:
   - git:
-      repoURL: https://github.com/<dein-name>/argocd-demo.git
+      repoURL: https://github.com/alsbevern/argocd-demo-sb.git
       revision: HEAD
       directories:
       - path: applications/*
